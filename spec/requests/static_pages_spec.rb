@@ -29,5 +29,17 @@ end
     end
     
   end
+  
+  describe "Contact page" do
+    it "Should have content 'Contact'" do visit '/static_pages/contact' 
+      page.should have_content('Contact')
+    end
+    
+     it "Should have the title 'Contact'" do
+      visit '/static_pages/contact'
+      page.should have_selector('title', :text => 'Contact')
+    end
+    
+  end
 
 end
